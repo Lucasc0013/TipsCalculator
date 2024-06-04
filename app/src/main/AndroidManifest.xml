@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TipsCalculator"
         tools:targetApi="31">
+
+        <activity
+            android:name=".PrincialScreen"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
