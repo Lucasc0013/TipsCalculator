@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 
 import com.lucas.tipscalculator.databinding.ActivityMainBinding
-import com.lucas.tipscalculator.databinding.ActivityPrincialScreenBinding
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -16,40 +16,52 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var porcente = 0
+
+        var percentage = 0
         binding.btOne.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                porcente = 10
+                percentage = 10
             }
         }
         binding.btTwo.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                porcente = 15
+                percentage = 15
             }
         }
         binding.btThree.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                porcente = 20
+                percentage = 20
             }
         }
 
+        binding.btCalulo.setOnClickListener {
+
+            val accounttemp = binding.tieAccount.text
+            val peopletemp = binding.tiePeople.text
+
+            if (accounttemp?.isEmpty() == true || peopletemp?.isEmpty() == true) {
+
+                Snackbar.make(binding.tieAccount, "Preencha os campos", Snackbar.LENGTH_LONG).show()
+
+            } else {
+                val account: Float = binding.tieAccount.text.toString().toFloat()
+                val people: Int = binding.tiePeople.text.toString().toInt()
+
+                val result = account / people
+                val tips = result * percentage / 100
+                val total = result + tips
 
 
+                intent = Intent(this, ResultActivity2::class.java)
+                intent.apply {
+                    putExtra("total", total)
+                    putExtra("account", account)
+                    putExtra("people", people)
+                }
+                clean()
+                startActivity(intent)
 
-        binding.btCalculo.setOnClickListener {
-
-
-            val conta: Float = binding.tieConta.text.toString().toFloat()
-            val pessoa: Int = binding.tiePeople.text.toString().toInt()
-
-            val res = conta / pessoa
-            val tips = res * porcente / 100
-            val total = res + tips
-
-
-            binding.tvResult.text = "Total with tips" + total
-
-
+            }
         }
         binding.btClean.setOnClickListener {
             clean()
@@ -58,9 +70,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun clean() {
-        binding.tieConta.setText("")
+        binding.tieAccount.setText("")
         binding.tiePeople.setText("")
-        binding.tvResult.setText("")
+        binding.btOne.isChecked = false
+        binding.btTwo.isChecked = false
+        binding.btThree.isChecked = false
+
 
     }
 }
