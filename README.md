@@ -3,11 +3,12 @@
   This is an application developed in Kotlin language, with the aim of helping the user to split a restaurant bill or other types.
 
 ## :camera_flash: Screenshots
-  <img src="https://github.com/Lucasc0013/TipsCalculator/assets/133276726/e574a2b1-5fd4-4125-bc06-c65c7be03174" width=260/> 
-  <img src="https://github.com/Lucasc0013/TipsCalculator/assets/133276726/91035ef6-2a34-453c-83f6-42a80964b83b" width=260/> 
-  <img src="https://github.com/Lucasc0013/TipsCalculator/assets/133276726/d3812f94-ff3c-4028-8407-b24e91264c64" width=260/> 
+  <img src="https://github.com/Lucasc0013/TipsCalculator/assets/133276726/e35614df-8333-4a71-ad54-c97650bc2a03" width=260/> 
+  <img src="https://github.com/Lucasc0013/TipsCalculator/assets/133276726/f0138de8-0866-4018-a70e-1b37951ffc5b" width=260/> 
+  <img src="https://github.com/Lucasc0013/TipsCalculator/assets/133276726/cca8331d-bb31-4829-a991-262fb7d68895" width=260/>
+
   
-## Tecnologias
+## Tecnologias  
 - Activity
 - Intent
 - Snackbar
