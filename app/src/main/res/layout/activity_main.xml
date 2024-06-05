@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="22dp"
         android:gravity="center_horizontal"
-        android:text="Tips Calculator"
+        android:text="Tip Calculator"
         android:textColor="@color/white"
         android:textSize="32dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,7 +116,9 @@
         android:text="Clean"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"></Button>
+        app:layout_constraintStart_toStartOf="parent">
+
+    </Button>
 
     <Button
         android:id="@+id/bt_calulo"

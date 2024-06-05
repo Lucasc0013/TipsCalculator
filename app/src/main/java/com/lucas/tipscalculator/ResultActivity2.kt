@@ -19,7 +19,7 @@ class ResultActivity2 : AppCompatActivity() {
         val account = intent.getFloatExtra("account", 0.0f)
         val people = intent.getIntExtra("people", 0)
 
-        binding.tvResult.text = "Total with tips " + total.toString()
+        binding.tvResult.text = "Total with tip " + total.toString()
         binding.tvAccountResult.text = account.toString()
         binding.tvPeopleResul.text = people.toString()
 
