@@ -8,7 +8,7 @@
   <img src="https://github.com/Lucasc0013/TipsCalculator/assets/133276726/cca8331d-bb31-4829-a991-262fb7d68895" width=260/>
 
   
-## Tecnologias  
+## Technologies
 - Activity
 - Intent
 - Snackbar
